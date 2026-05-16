@@ -258,9 +258,12 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
+            type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors"
             aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -271,11 +274,12 @@ const Header = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white border-t border-gray-200 mt-2 mx-4 sm:mx-6 rounded-2xl shadow-xl overflow-hidden"
+            className="lg:hidden bg-white border-t border-gray-200 mt-2 mx-4 sm:mx-6 rounded-2xl shadow-xl overflow-hidden max-h-[calc(100vh-7rem)] overflow-y-auto"
           >
             <div className="p-4 space-y-1">
 
@@ -345,7 +349,7 @@ const Header = () => {
               </Link>
 
               <Link
-                to="/about"
+                to="/company/about-us"
                 className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
