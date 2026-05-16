@@ -2,10 +2,13 @@
   "name": "iclapss-web",
   "private": true,
   "version": "1.0.0",
+  "homepage": "https://sumitchaskar7000.github.io/iclapss23",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
