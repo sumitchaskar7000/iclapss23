@@ -1,0 +1,14 @@
+[33m544c672[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/main[m[33m)[m Delete dist directory
+[33maedd5ba[m Add files via upload
+[33mb6a1d1c[m Delete tailwind.config.js
+[33m68440e7[m Delete postcss.config.js
+[33mda2efd5[m Delete vite.config.js
+[33m42a3bb3[m Delete package-lock.json
+[33m6456429[m Delete package.json
+[33m6eedec4[m Delete public directory
+[33mb17cc2b[m Delete src directory
+[33m261dd42[m Add production build
+[33m70aa7ee[m Update dependencies
+[33m63139ba[m Create CNAME
+[33m9d1fbef[m Initial commit
+[33m2b47cbd[m first commit

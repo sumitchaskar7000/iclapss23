@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   BASE STYLES
+================================ */
+@layer base {
+  html,
+  body {
+    @apply bg-white text-gray-900 font-sans;
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* ✅ Prevent horizontal scroll issue */
+  }
+}
+
+/* ===============================
+   CUSTOM UTILITIES
+================================ */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  /* Line clamp utility */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* ===============================
+   CUSTOM SCROLLBAR
+================================ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* ===============================
+   BLOB ANIMATION
+================================ */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.logo-wordmark {
+  font-family: "ZCOOL XiaoWei", serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Keep hero/background color under fixed header, but push first section content down */
+main > div > :first-child {
+  padding-top: 9rem;
+}
+
+main > .home-page > :first-child {
+  padding-top: 4rem;
+}
+
+/* ===============================
+   THEME: DAY / NIGHT
+================================ */
+.theme-dark body {
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+.theme-dark .bg-white {
+  background-color: #0f172a !important;
+}
+
+.theme-dark .bg-black {
+  background-color: #020617 !important;
+}
+
+.theme-dark .bg-gray-50 {
+  background-color: #111827 !important;
+}
+
+.theme-dark .bg-blue-50 {
+  background-color: #0f1e3a !important;
+}
+
+.theme-dark .bg-gray-100 {
+  background-color: #1f2937 !important;
+}
+
+.theme-dark .text-gray-900 {
+  color: #f3f4f6 !important;
+}
+
+.theme-dark .text-gray-700,
+.theme-dark .text-gray-600,
+.theme-dark .text-gray-500 {
+  color: #cbd5e1 !important;
+}
+
+.theme-dark .border-gray-200,
+.theme-dark .border-gray-300 {
+  border-color: #334155 !important;
+}
+
+.theme-dark .shadow-lg,
+.theme-dark .shadow-xl,
+.theme-dark .shadow-2xl {
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.55) !important;
+}
+
+.theme-dark .bg-white\/90 {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+}
+
+.theme-dark .border-white\/60 {
+  border-color: rgba(148, 163, 184, 0.3) !important;
+}
+
+.theme-dark .text-blue-100,
+.theme-dark .text-blue-50 {
+  color: #c7d2fe !important;
+}
+
+.theme-dark .text-gray-300,
+.theme-dark .text-gray-400 {
+  color: #cbd5e1 !important;
+}
+
+.theme-dark .hover\:bg-gray-50:hover {
+  background-color: #1e293b !important;
+}
+
+.theme-dark .bg-gradient-to-br.from-primary-50,
+.theme-dark .bg-gradient-to-br.via-white,
+.theme-dark .bg-gradient-to-br.to-saffron-50 {
+  background-image: linear-gradient(to bottom right, #0b1220, #0f172a, #111827) !important;
+}
+
+.theme-dark input,
+.theme-dark textarea,
+.theme-dark select {
+  background-color: #0b1220;
+  color: #e5e7eb;
+  border-color: #334155 !important;
+}
